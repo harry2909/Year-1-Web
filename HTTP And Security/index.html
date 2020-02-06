@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CSS Template</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    header {
+      background-color: #666;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+      color: white;
+    }
+
+    article {
+      width: 100%;
+      padding: auto;
+      background-color: #f1f1f1;
+      height: auto;
+    
+    }
+
+    
+    @media (max-width: 600px) {
+
+      nav,
+      article {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h2>HTTP & Security-c3506733</h2>
+  </header>
+
+  <section>
+    <article>
+      <h1>What is the Hypertext Transfer Protocol (HTTP)?</h1>
+      <p>A application-layer protocol that is used for transmitting hypermedia documents.</p>
+      <p>It uses a client-server model with the client requesting and waititng for a server response.</p><br>
+      <h1>Why is HTTP called a stateless protocol?</h1>
+      <p>It is stateless, meaning it does not keep data between two requests.</p><br>
+      <h1>Describe the three phases of establishing a session using client-server protocols such as HTTP?</h1>
+      <p>Client establishes an apporpriate connection(TCP).</p>
+      <p>Client sends request and then waits.</p>
+      <p>Server processes request, provides answer and sends status code + appropriate data.</p><br>
+      <h1>Describe the parameters on a get and post request.</h1>
+      <p>Get: requests representation of specified data.</p>
+      <p>Post: submits entitiy to specified data, causing change in state on server</p><br>
+      <h1>What are the HTTP response status code and What do the HTTP status codes, 200, and 404 indicate?</h1>
+      <p>Indicate whether a specific HTTP request has been completed successfully. Thesse involve information responses</p>
+      <p>successful responses, redirects, client errors, server errors.</p>
+      <p>200: Request succeeded</p>
+      <p>404: Server cannot find requested data. Wrong URL, resources does not exist, etc.</p><br>
+      <h1>What are HTTP cookies? Give an example.</h1>
+      <p>Cookie: Data that server sends to user's browser. Checks if two requests came from same browser. (Stateless information)</p>
+      <p>Three main purposes: session management (logins, game scores, etc), personalisation (themes). tracking (recording user behaviour)</p>
+      <p>Example: Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1;</p><br>
+      <h1>Why are cookies a security issue?</h1>
+      <p>Used to identify a user's authenticated session. Stealing this cookie steals the user's session.</p>
+      <p>Third part cookies (advertising) and zombie cookies (re-create after deletion) can be harmful if hijacked.</p><br>
+      <h1>Describe session hijacking and XSS.</h1>
+      <p>Hijacking involves taking a cookie that is used to authenticate a user's login.</p>
+      <p>XSS (cross-site scripting) involves implanting a malicious client-side code that is exceuted by the victim. It contains Javascript and often accesses all cookies and content.</p><br>
+      <h1>Describe Cross-site request forgery(CSRF).</h1>
+      <p>CSRF: Disguising elements as malicious requests. For example, an image becomes a bank withdrawal request.</p>
+      <p>This works by using valid cookies from a login session, and then transferring the funds instantly, if the user is logged into their banking.</p><br>
+      <h1>What are Cross-site HTTP requests (CORS) and what requests use CORS?</h1>
+      <p>CORS are used to allow for web applications at one domain to have access to selected resources at a different domain.</p>
+      <p>Requests:</p>
+      <p>Iterations of the XMLHttpRequest or Fetch APIs.</p>
+      <p>Web Fonts</p>
+      <p>WebGL textures.</p>
+      <p>Images and video frames drawn to a canvas.</p>
+    </article>
+  </section>
+
+
+</body>
+
+</html>
